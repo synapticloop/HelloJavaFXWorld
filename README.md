@@ -2,6 +2,9 @@ This is the base project to build, run, deploy, and publish a disk image
 that is signed and notaried so that it is able to be downloaded from a
 website and run by the end user without problem.
 
+This includes a splashscreen, with removal of the splashscreen on startup
+and runtime hooks to shutdown gracefully on MacOS.
+
 Full instructions can be found here:
 https://synapticloop.medium.com/jpackage-building-and-deploying-a-java-application-on-macos-3fe48b4cb1d1
 
@@ -17,3 +20,5 @@ export APPLE_HELLO_JAVA_FX_WORLD_APP_PASSWORD="YOUR_NOTARISED_APP_PASSWORD"
 then run
 
 `./dist-mac.sh`
+
+The main 'magic' happens in the `./dist-mac.sh` file, not the `build.gradle` file.
